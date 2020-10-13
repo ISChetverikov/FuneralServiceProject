@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+
+<div class="header">
+  <h1>Haron ERP</h1>
+</div>
+
+<div class="sidenav">
+  <a href="#about">Funerals</a>
+    <a href="#clients">Clients</a>
+  <a href="#services">Cemeteries</a>
+  <a href="#contact">Mortuaries</a>
+    <a href="#contact">Employees</a>
+    <a href="{{ url_for('.cars') }}">Cars</a>
+</div>
+
+<div class="main">
+    <p>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    </p>
+    {% block main %}
+    <h1> Welcome to managment system of "Haron" Funeral Agency </h1>
+    {% endblock %}
+</div>
+
+</body>
+</html>

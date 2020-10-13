@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% block main %}
+
+<h1>Car add</h1>
+
+<form method="post" action="{{ url_for('.create_car') }}">
+<dl>
+    <p>
+        <label><h6>Registration Number:</h6></label>
+    </p>
+<p>
+<input name="inputRegistrationNumber"
+                 type="text" placeholder="registration number" autocomplete="off" required>
+</p>
+    <p>
+        <label><h6>Type:</h6></label>
+    </p>
+<p>
+<input name="inputType"
+                 type="text" placeholder="type" autocomplete="off" required>
+</p>
+    <p>
+        <label><h6>Model:</h6></label>
+    </p>
+<p>
+<input name="inputModel"
+                 type="text" placeholder="type" autocomplete="off" required>
+</p>
+
+</dl>
+<p>
+<input type="submit" value="Create">
+</p>
+</form>
+
+{% endblock %}
