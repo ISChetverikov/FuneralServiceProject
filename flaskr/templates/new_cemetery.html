@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+{% block main %}
+
+<h1>Cemetery add</h1>
+
+<form method="post" action="{{ url_for('.create_cemetery') }}">
+<dl>
+    <p>
+        <label><h6>Name:</h6></label>
+    </p>
+<p>
+<input name="inputName"
+                 type="text" placeholder="Central cemetery" autocomplete="off" required>
+</p>
+    <p>
+        <label><h6>Address:</h6></label>
+    </p>
+<p>
+<input name="inputAddress"
+                 type="text" placeholder="NYC, Broadway" autocomplete="off" required>
+</p>
+    <p>
+        <label><h6>Phone:</h6></label>
+    </p>
+<p>
+<input name="inputPhone"
+                 type="text" placeholder="555-45678" autocomplete="off" required>
+</p>
+    <p>
+        <label><h6>Places:</h6></label>
+    </p>
+<p>
+<input name="inputPlaces"
+                 type="number" placeholder="10" autocomplete="off" required>
+</p>
+
+</dl>
+<p>
+<input type="submit" value="Create">
+</p>
+</form>
+
+
+{% endblock %}

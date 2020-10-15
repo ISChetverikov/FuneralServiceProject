@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block main %}
+
+<h1>Worker add</h1>
+
+<form method="post" action="{{ url_for('.create_worker') }}">
+<dl>
+    <p>
+        <label><h6>Full name:</h6></label>
+    </p>
+<p>
+<input name="inputFullname"
+                 type="text" placeholder="John Doe" autocomplete="off" required>
+</p>
+    <p>
+        <label><h6>Passport number:</h6></label>
+    </p>
+<p>
+<input name="inputPassportNumber"
+                 type="text" placeholder="123345" autocomplete="off" required>
+</p>
+
+</dl>
+<p>
+<input type="submit" value="Create">
+</p>
+</form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block main %}
+
+<h1>Worker edit</h1>
+
+<form method="post" action="{{ url_for('.update_worker') }}">
+<dl>
+    <p>
+        <label><h6>Full name:</h6></label>
+    </p>
+<p>
+<input name="inputFullname" value = "{{ worker['fullname'] }}"
+                 type="text" placeholder="John Doe" autocomplete="off" required>
+</p>
+    <p>
+        <label><h6>Passport number:</h6></label>
+    </p>
+<p>
+<input name="inputPassportNumber" value="{{ worker['passport_number'] }}"
+                 type="text" placeholder="123345" autocomplete="off" required>
+</p>
+</dl>
+<p>
+<input name="id" value="{{ worker['worker_id'] }}" type="hidden">
+<input type="submit" value="Submit">
+</p>
+</form>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+{% block main %}
+
+<h1>Cemetery edit</h1>
+
+<form method="post" action="{{ url_for('.update_cemetery') }}">
+<dl>
+    <p>
+        <label><h6>Name:</h6></label>
+    </p>
+<p>
+<input name="inputName" value = "{{ cemetery['name'] }}"
+                 type="text" autocomplete="off" required>
+</p>
+    <p>
+        <label><h6>Address:</h6></label>
+    </p>
+<p>
+<input name="inputAddress" value="{{ cemetery['address'] }}"
+                 type="text" autocomplete="off" required>
+</p>
+    <p>
+        <label><h6>Phone:</h6></label>
+    </p>
+<p>
+<input name="inputPhone" value="{{ cemetery['phone'] }}"
+                 type="text" placeholder="555-45678" autocomplete="off" required>
+</p>
+    <p>
+        <label><h6>Places:</h6></label>
+    </p>
+<p>
+<input name="inputPlaces"  value="{{ cemetery['places'] }}"
+                 type="number" placeholder="10" autocomplete="off" required>
+</p>
+</dl>
+<p>
+<input name="id" value="{{ cemetery['cemetery_id'] }}" type="hidden">
+<input type="submit" value="Submit">
+</p>
+</form>
+
+
+{% endblock %}

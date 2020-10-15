@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block main %}
+<h1>{{ name }}</h1>
+<form method="post" action="{{ url }}">
+</p>
+  {{ form.select.label }}
+  {{ form.select }}
+</p>
+<p>
+{{ form.submit }}
+</p>
+</form>
+{{ table }}
+
+{% endblock %}

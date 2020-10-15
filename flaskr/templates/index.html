@@ -11,12 +11,19 @@
 </div>
 
 <div class="sidenav">
-  <a href="#about">Funerals</a>
-    <a href="#clients">Clients</a>
-  <a href="#services">Cemeteries</a>
-  <a href="#contact">Mortuaries</a>
-    <a href="#contact">Employees</a>
+    <h2>Table manipulation</h2>
+  <a href="{{ url_for('.funerals') }}">Funerals</a>
+    <a href="{{ url_for('.clients') }}">Clients</a>
+  <a href="{{ url_for('.cemeteries') }}">Cemeteries</a>
+  <a href="{{ url_for('.mortuaries') }}">Mortuaries</a>
+    <a href="{{ url_for('.workers') }}">Workers</a>
     <a href="{{ url_for('.cars') }}">Cars</a>
+    <h2>Reports</h2>
+    <a href="{{ url_for('.get_free_workers') }}">FreeWorkers</a>
+    <a href="{{ url_for('.get_incompleted_funerals') }}">IncompletedFunerals</a>
+    <a href="{{ url_for('.get_freeplaces') }}">Cemetery's free places</a>
+    <a href="{{ url_for('.get_cemetery_clients') }}">Cemetery's clients</a>
+    <a href="{{ url_for('.get_mortuary_clients') }}">Mortuary's clients</a>
 </div>
 
 <div class="main">

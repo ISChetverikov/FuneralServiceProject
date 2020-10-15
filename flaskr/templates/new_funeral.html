@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block main %}
+
+<h1>Funeral {{ action }}</h1>
+
+<form method="post" action="{{ url }}">
+    {{ form.hidden_tag() }}
+  <p>
+  {{ form.status.label }}
+  {{ form.status }}
+  </p>
+  <p>
+  {{ form.date.label }}
+  {{ form.date }}
+</p>
+  <p>
+  {{ form.cemeteries.label }}
+  {{ form.cemeteries }}
+</p>
+  <p>
+  {{ form.clients.label }}
+  {{ form.clients }}
+</p>
+  <p>
+  {{ form.submit }}
+  </p>
+</form>
+
+{% endblock %}

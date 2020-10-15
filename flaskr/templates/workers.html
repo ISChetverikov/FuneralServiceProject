@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+{% block main %}
+<h1>Workers</h1>
+<a href="{{ url_for('.show_create_worker_dialog') }}" class="btn btn-primary">Add...</a>
+
+{{ table }}
+
+{% endblock %}

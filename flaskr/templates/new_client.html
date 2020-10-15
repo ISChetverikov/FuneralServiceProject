@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+{% block main %}
+
+<h1>Client {{ action }}</h1>
+
+<form method="post" action="{{ url }}">
+    {{ form.hidden_tag() }}
+  <p>
+  {{ form.fullname.label }}
+  {{ form.fullname }}
+  </p>
+  <p>
+  {{ form.passport_number.label }}
+  {{ form.passport_number }}
+</p>
+  <p>
+  {{ form.birthday.label }}
+  {{ form.birthday }}
+</p>
+  <p>
+  {{ form.deathday.label }}
+  {{ form.deathday }}
+</p>
+  <p>
+  {{ form.size.label }}
+  {{ form.size }}
+</p>
+  <p>
+  {{ form.weight.label }}
+  {{ form.weight }}
+</p>
+  <p>
+  {{ form.cemeteries.label }}
+  {{ form.cemeteries }}
+</p>
+  <p>
+  {{ form.mortuaries.label }}
+  {{ form.mortuaries }}
+</p>
+  <p>
+  {{ form.submit }}
+  </p>
+</form>
+
+{% endblock %}

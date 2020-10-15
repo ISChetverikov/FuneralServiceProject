@@ -4,7 +4,7 @@ body {
 
 .sidenav {
   height: 750px;
-  width: 200px;
+  width: 300px;
     display: inline-block;
     vertical-align: top;
   z-index: 1;
@@ -22,6 +22,13 @@ body {
   display: block;
 }
 
+.sidenav h2 {
+  padding: 6px 8px 6px 16px;
+  font-size: 30px;
+  color: #818181;
+  display: block;
+}
+
 .sidenav a:hover {
   color: #f1f1f1;
 }
@@ -30,7 +37,7 @@ body {
   color: white;
   background: black;
   text-align: center;
-    width: 100%;
+    width: 2200px;
     height: 200px;
     border-bottom: 10px solid #818181;
     line-height: 200px;
