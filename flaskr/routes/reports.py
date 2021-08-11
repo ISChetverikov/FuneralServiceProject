@@ -94,20 +94,20 @@ def get_mortuary_clients():
         sql = "SELECT MortuaryId, MortuaryName FROM mortuary"
         cursor.execute(sql)
         mortuaries_rows = cursor.fetchall()
-        form = SelectForm("Cemetery", select_list=mortuaries_rows)
+        form = SelectForm("Mortuary", select_list=mortuaries_rows)
 
         if request.method == 'GET':
-            return render_template("ReportsIntParam.html", form=form, url=url_for('.get_cemetery_clients'), name='Clients in mourtaries')
+            return render_template("ReportsIntParam.html", form=form, url=url_for('.get_mortuary_clients'), name='Clients in mourtaries')
 
         id = request.form['select']
-        sql = "CALL GeMortuaryDeceased(%s)"
+        sql = "CALL GetMortuaryDeceased(%s)"
         cursor.execute(sql, id)
         rows = cursor.fetchall()
 
         clients = ShortClientsTable(list(map(lambda x: ShortClient(*x), rows)))
         clients.border = True
 
-        return render_template('ReportsIntParam.html', form=form, url=url_for('.get_cemetery_clients'), name="Clients in mourtaries", table=clients)
+        return render_template('ReportsIntParam.html', form=form, url=url_for('.get_mortuary_clients'), name="Clients in mourtaries", table=clients)
 
     finally:
         if cursor is not None:

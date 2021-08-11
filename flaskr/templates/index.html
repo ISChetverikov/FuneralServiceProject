@@ -9,7 +9,6 @@
 <div class="header">
   <h1>Haron ERP</h1>
 </div>
-
 <div class="sidenav">
     <h2>Table manipulation</h2>
   <a href="{{ url_for('.funerals') }}">Funerals</a>
@@ -25,22 +24,17 @@
     <a href="{{ url_for('.get_cemetery_clients') }}">Cemetery's clients</a>
     <a href="{{ url_for('.get_mortuary_clients') }}">Mortuary's clients</a>
 </div>
-
 <div class="main">
     <p>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
+    {% with messages = get_flashed_messages() %} {% if messages %}
     <ul class=flashes>
     {% for message in messages %}
     <li>{{ message }}</li>
     {% endfor %}
     </ul>
-    {% endif %}
-    {% endwith %}
+    {% endif %} {% endwith %}
     </p>
-    {% block main %}
-    <h1> Welcome to managment system of "Haron" Funeral Agency </h1>
-    {% endblock %}
+    {% block main %} <h1> Welcome to managment system of "Haron" Funeral Agency </h1> {% endblock %}
 </div>
 
 </body>
